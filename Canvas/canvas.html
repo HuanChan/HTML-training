@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<!--<html lang="en" xmlns="http://www.w3.org/1999/xhtml">-->
+<!-- lang 属性规定元素内容的语言。 -->
+<!--xmlns 属性可以在文档中定义一个或多个可供选择的命名空间。http://www.w3school.com.cn/tags/tag_prop_xmlns.asp -->
+<!-- HTML 全局属性。http://www.w3school.com.cn/tags/html_ref_standardattributes.asp -->
+<head>
+    <meta charset="utf-8" />
+    <title>画布canvas</title>
+    <link rel="stylesheet" href="canvas.css">
+    <script src="canvas.js"></script>
+</head>
+
+<body>
+
+<h1>画布canvas</h1>
+<p id="description">这是一个canvasAPI的学习</p>
+<canvas id="tshirtCanvas" width="600" height="200">只要浏览器看到一个它不认识的元素，默认行为就是显示其中包含的文本</canvas>
+
+<form id="canvasForm">
+<p>
+    <label for="backgroundColor">选择背景颜色：</label>
+    <!-- for 属性规定 label 与哪个表单元素绑定。 -->
+    <select id="backgroundColor">
+        <option value="white" selected="selected">白色</option>
+        <!--  selected属性	规定选项（在首次显示在列表中时）表现为选中状态。 -->
+        <option value="black">黑色</option>
+    </select>
+</p>
+<p>
+    <label for="shape">圆形或者正方形？</label>
+    <select id="shape">
+        <option value="none" selected="selected">都不是</option>
+        <option value="circles">圆形</option>
+        <option value="squares">正方形</option>
+    </select>
+</p>
+<p>
+    <label for="foregroundColor">选择文本颜色：</label>
+    <select id="foregroundColor">
+        <option value="black" selected="selected">黑色</option>
+        <option value="white">白色</option>
+    </select>
+</p>
+<p>
+    <!-- 我们需要从Twitter得到一个实际的微博 -->
+    <label for="tweets">选择一个微博：</label>
+    <select id="tweets">
+    </select>
+</p>
+<p>
+    <!-- 预览按钮 -->
+    <input type="button" id="previewButton" value="预览">
+</p>
+</form>
+<script src="http://twitter.com/statuses/user_timeline/wickedsmartly.json?callback=updateTweets"></script>
+</body>
+</html>

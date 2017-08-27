@@ -1,4 +1,4 @@
-﻿window.onload=init;
+window.onload=init;
 function init(){
 	//请求JSON格式数据
 	var url="http://localhost/CommunicationAPI/sales.json";//测试一个本地文件
